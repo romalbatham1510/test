@@ -4,6 +4,8 @@ from pyspark.sql.functions import *
 df_final=df.withColumn("ingestion_date",current_timestamp()).drop("url")
 df_final.write.saveAsTable("romal.constructor")
 
+display(df_final)
+
 # COMMAND ----------
 
 (spark
